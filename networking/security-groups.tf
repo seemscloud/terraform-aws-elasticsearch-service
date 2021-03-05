@@ -18,7 +18,7 @@ resource "aws_security_group" "instance-bastion-sg" {
   }
 
   tags = {
-    Name = var.instance_bastion_sg_name
+    Name = var.ec2_bastion_sg_name
   }
 
   depends_on = [

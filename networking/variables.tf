@@ -33,7 +33,14 @@ variable "vpc_subnet_bastion_cidr_block" {
   type = string
 }
 
+variable "vpc_subnet_es_svc_name" {
+  type = string
+}
+variable "vpc_subnet_es_svc_cidr_block" {
+  type = list(string)
+}
+
 # VPC - Security Groups
-variable "instance_bastion_sg_name" {
+variable "ec2_bastion_sg_name" {
   type = string
 }

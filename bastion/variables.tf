@@ -17,36 +17,36 @@ variable "vpc_subnet_bastion_id" {
 }
 
 # VPC - Security Groups
-variable "instance_bastion_sg_id" {
+variable "ec2_bastion_sg_id" {
   type = string
 }
 
 # Instance - Bastion
-variable "instance_bastion_name" {
+variable "ec2_bastion_name" {
   type = string
 }
 
-variable "instance_bastion_type" {
+variable "ec2_bastion_type" {
   type = string
 }
 
-variable "instance_bastion_ami" {
+variable "ec2_bastion_ami" {
   type = string
 }
 
-variable "instance_bastion_rbd_type" {
+variable "ec2_bastion_rbd_type" {
   type = string
 }
 
-variable "instance_bastion_rbd_size" {
+variable "ec2_bastion_rbd_size" {
   type = string
 }
 
-variable "instance_bastion_abd_type" {
+variable "ec2_bastion_abd_type" {
   type = string
 }
 
-variable "instance_bastion_abd_size" {
+variable "ec2_bastion_abd_size" {
   type = string
 }
 

@@ -37,31 +37,80 @@ variable "vpc_subnet_bastion_cidr_block" {
   type = string
 }
 
+variable "vpc_subnet_es_svc_name" {
+  type = string
+}
+
+variable "vpc_subnet_es_svc_cidr_block" {
+  type = list(string)
+}
+
 # Instance - Bastion
-variable "instance_bastion_name" {
+variable "ec2_bastion_name" {
   type = string
 }
 
-variable "instance_bastion_type" {
+variable "ec2_bastion_type" {
   type = string
 }
 
-variable "instance_bastion_rbd_type" {
+variable "ec2_bastion_rbd_type" {
   type = string
 }
 
-variable "instance_bastion_rbd_size" {
+variable "ec2_bastion_rbd_size" {
   type = string
 }
 
-variable "instance_bastion_abd_type" {
+variable "ec2_bastion_abd_type" {
   type = string
 }
 
-variable "instance_bastion_abd_size" {
+variable "ec2_bastion_abd_size" {
   type = string
 }
 
-variable "instance_bastion_ami" {
+variable "ec2_bastion_ami" {
+  type = string
+}
+
+# Elasticsearch - Service
+variable "es_svc_domain_name" {
+  type = string
+}
+
+variable "es_svc_data_node_count" {
+  type = string
+}
+
+variable "es_svc_data_node_ec2_type" {
+  type = string
+}
+
+variable "es_svc_data_node_volume_type" {
+  type = string
+}
+
+variable "es_svc_data_node_volume_size" {
+  type = string
+}
+
+variable "es_svc_dedicated_master_node_enabled" {
+  type = bool
+}
+
+variable "es_svc_dedicated_master_node_ec2_type" {
+  type = string
+}
+
+variable "es_svc_dedicated_master_node_count" {
+  type = string
+}
+
+variable "es_svc_zone_awareness_enabled" {
+  type = bool
+}
+
+variable "es_svc_availability_zone_count" {
   type = string
 }

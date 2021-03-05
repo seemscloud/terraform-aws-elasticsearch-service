@@ -1,12 +1,12 @@
 resource "aws_instance" "bastion" {
-  ami = var.instance_bastion_ami
-  instance_type = var.instance_bastion_type
+  ami = var.ec2_bastion_ami
+  instance_type = var.ec2_bastion_type
 
   key_name = var.key_pair_deployer_name
 
   root_block_device {
-    volume_type = var.instance_bastion_rbd_type
-    volume_size = var.instance_bastion_rbd_size
+    volume_type = var.ec2_bastion_rbd_type
+    volume_size = var.ec2_bastion_rbd_size
   }
 
   network_interface {
@@ -15,7 +15,7 @@ resource "aws_instance" "bastion" {
   }
 
   tags = {
-    Name = var.instance_bastion_name
+    Name = var.ec2_bastion_name
   }
 
   depends_on = [

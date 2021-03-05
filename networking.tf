@@ -15,6 +15,9 @@ module "networking" {
   vpc_subnet_bastion_name = local.vpc_subnet_bastion_name
   vpc_subnet_bastion_cidr_block = var.vpc_subnet_bastion_cidr_block
 
+  vpc_subnet_es_svc_name = local.vpc_subnet_es_svc_name
+  vpc_subnet_es_svc_cidr_block =  var.vpc_subnet_es_svc_cidr_block
+
   # Instance - Bastion
-  instance_bastion_sg_name = local.instance_bastion_name
+  ec2_bastion_sg_name = local.ec2_bastion_name
 }

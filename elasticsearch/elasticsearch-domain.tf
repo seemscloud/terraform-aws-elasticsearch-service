@@ -1,5 +1,10 @@
+data "aws_region" "current" {}
+
+data "aws_caller_identity" "current" {}
+
 resource "aws_elasticsearch_domain" "example" {
   domain_name = var.es_svc_domain_name
+  elasticsearch_version = var.es_svc_version
 
   ebs_options {
     ebs_enabled = true
@@ -25,5 +30,27 @@ resource "aws_elasticsearch_domain" "example" {
 
   vpc_options {
     subnet_ids = var.vpc_subnet_es_svc_ids
+
+    security_group_ids = [
+      var.sg_elasticsearch_id
+    ]
   }
+
+  access_policies = <<CONFIG
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "es:*",
+            "Principal": "*",
+            "Effect": "Allow",
+            "Resource": "arn:aws:es:${data.aws_region.current.name}:${data.aws_caller_identity.current.account_id}:domain/${var.es_svc_domain_name}/*"
+        }
+    ]
+}
+CONFIG
+
+  depends_on = [
+    var.dependencies
+  ]
 }

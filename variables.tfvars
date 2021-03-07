@@ -14,7 +14,7 @@ default_sg_name = "default-sg"
 vpc_subnet_bastion_name = "bastion"
 vpc_subnet_bastion_cidr_block = "172.31.11.0/24"
 
-vpc_subnet_es_svc_name = "elasticsearch-service"
+vpc_subnet_es_svc_name = "elasticsearch"
 vpc_subnet_es_svc_cidr_block = [
   "172.31.21.0/24",
   "172.31.22.0/24",
@@ -31,6 +31,7 @@ ec2_bastion_abd_size = "20"
 ec2_bastion_ami = "ami-0823c236601fef765"
 
 # Elasticsearch - Service
+es_svc_version = "7.9"
 es_svc_domain_name = "elasticsearch"
 es_svc_data_node_count = "3"
 es_svc_data_node_ec2_type = "r4.large.elasticsearch"

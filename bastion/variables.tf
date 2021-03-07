@@ -17,7 +17,7 @@ variable "vpc_subnet_bastion_id" {
 }
 
 # VPC - Security Groups
-variable "ec2_bastion_sg_id" {
+variable "sg_bastion_id" {
   type = string
 }
 

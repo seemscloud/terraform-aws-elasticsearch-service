@@ -11,7 +11,7 @@ module "bastion" {
   vpc_subnet_bastion_id = module.networking.vpc_subnet_bastion_id
 
   # VPC - Security Groups
-  ec2_bastion_sg_id = module.networking.ec2_bastion_sg_id
+  sg_bastion_id = module.networking.sg_bastion_id
 
   # Instance - Bastion
   ec2_bastion_name = local.ec2_bastion_name

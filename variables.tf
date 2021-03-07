@@ -75,6 +75,10 @@ variable "ec2_bastion_ami" {
 }
 
 # Elasticsearch - Service
+variable "es_svc_version" {
+  type = string
+}
+
 variable "es_svc_domain_name" {
   type = string
 }

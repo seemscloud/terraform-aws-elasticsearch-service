@@ -3,7 +3,15 @@ variable "vpc_subnet_es_svc_ids" {
   type = list(string)
 }
 
+variable "sg_elasticsearch_id" {
+  type = string
+}
+
 # Elasticsearch - Service
+variable "es_svc_version" {
+  type = string
+}
+
 variable "es_svc_domain_name" {
   type = string
 }
@@ -42,4 +50,9 @@ variable "es_svc_zone_awareness_enabled" {
 
 variable "es_svc_availability_zone_count" {
   type = string
+}
+
+# Dependencies
+variable "dependencies" {
+  type = list(string)
 }

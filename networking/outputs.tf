@@ -21,6 +21,10 @@ output "vpc_subnet_es_svc_ids" {
 }
 
 # VPC - Security Groups
-output "ec2_bastion_sg_id" {
-  value = aws_security_group.instance-bastion-sg.id
+output "sg_bastion_id" {
+  value = aws_security_group.bastion.id
+}
+
+output "sg_elasticsearch_id" {
+  value = aws_security_group.elasticsearch.id
 }
